@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SobreMi.html">Sobre Mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <div class="form-container">
+    <h1>Contacto</h1>
+    <form id="contact-form" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="confirmation" class="hidden">
+      <p>¡Mensaje enviado con éxito!</p>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const confirmation = document.getElementById("confirmation");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Validar el correo electrónico en el formato deseado
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      const correo = document.getElementById("correo").value;
+
+      if (!emailPattern.test(correo)) {
+        alert("Por favor, ingrese un correo electrónico válido.");
+        return;
+      }
+
+      // Aquí puedes agregar código para enviar el formulario, por ejemplo, mediante AJAX.
+
+      // Mostrar confirmación visual
+      confirmation.style.display = "block";
+      // Limpia el formulario
+      contactForm.reset();
+    });
+  </script>
+
+</body>
+</html>

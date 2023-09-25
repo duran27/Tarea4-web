@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TAREA-4</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <!-- barra de navegacion-->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SobreMi.html">Sobre Mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header> 
+
+  <div class="container">
+    <p>¡Bienvenido a mi página web!: Aquí te presento mi vida en algunas imagenes.</p>
+    <div class="gallery">
+      <!-- Imagen 1 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen1.jpg" alt="Imagen 1">
+          <figcaption class="image-caption" style="margin-bottom: 20px;">Básquetbol</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen6.jpg" alt="Imagen 2">
+          <figcaption class="image-caption">FIFA</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen3.jpg" alt="Imagen 3">
+          <figcaption class="image-caption">Hip Hop</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 4 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen4.jpg" alt="Imagen 4">
+          <figcaption class="image-caption">Más Básquetbol</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 5 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen9.jpg" alt="Imagen 5">
+          <figcaption class="image-caption">Tenis</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 6 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen2.jpg" alt="Imagen 6">
+          <figcaption class="image-caption">Streetwear</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 7 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen7.jpg" alt="Imagen 7">
+          <figcaption class="image-caption">Tenis de mesa</figcaption>
+        </a>
+      </div>
+
+      <!-- Imagen 8 -->
+      <div class="gallery-item">
+        <a class="image-link" href="#">
+          <img class="click-zoom-image" src="imagen8.jpg" alt="Imagen 8">
+          <figcaption class="image-caption">Padel</figcaption>
+        </a>
+      </div>
+      
+      
+    </div>
+  </div>
+
+
+
+    <!-- Agregamos un  modal para que se abran laas imagenes al hacer click-->
+  <div class="modal" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <div class="modal-content">
+      <div class="centered-content">
+        <a href="#" class="modal-image-container">
+          <img id="modalImage" src="" alt="">
+          <figcaption id="caption"></figcaption>
+        </a>
+      </div>
+    </div>
+  </div>
+    <!-- utilizamos el javascript creado-->
+  <script src="modal.js"></script>
+
+
+</body>
+</html>
